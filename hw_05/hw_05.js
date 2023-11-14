@@ -1,20 +1,22 @@
 let arr = [];
-const arrayLength = prompt('Set array length');
+let arrayLength;
 
-for (let i = 0; i < arrayLength; i++) {
-    let arrayElem = Number(prompt('Set array elements'));
-    arr.push(arrayElem);
-    // console.log(typeof arrayElem);
+if (arrayLength !== null) {
+  do {
+      arrayLength = prompt('Set array length');
+  } while ((isNaN(arrayLength)));
 };
 
-document.write(arr.join(', ') + '<br>');
+for (let i = 0; i < arrayLength; i++) {
+  let arrayElem = prompt('Set array element #' + (i + 1));
+  arr.push(arrayElem);
+}
+console.log(arr);
 
-arr.sort(function (a, b) {
-    return a - b;
+let arrSort = arr.sort(function (a, b) {
+  return a - b;
 });
+console.log(arrSort);
 
-document.write(arr.join(', '));
-
-
-console.log(arr)
-
+let arrCut = arr.splice(1, 3);
+console.log(arrCut);
