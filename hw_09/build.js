@@ -1,5 +1,5 @@
 class Person {
-  personInfo(name, gender) {
+  constructor(name, gender) {
     this.name = name;
     this.gender = gender;
   }
@@ -15,22 +15,38 @@ class Appartment {
 
 class House {
   appartments = [];
-  maxNumberOfAppartment = 190;
 
-    getMaxNumberOfAppartment(maxNumberOfAppartment) {
-        this.maxNumberOfAppartment = maxNumberOfAppartment;
+  constructor(maxNumberOfAppartment) {
+    this.maxNumberOfAppartment = maxNumberOfAppartment;
+  }
+
+  addAppartment(appartment) {
+    if (this.appartments.length < this.maxNumberOfAppartment) {
+      this.appartments.push(appartment);
+    } else {
+      console.log(
+        `The max number of apartments is ${this.maxNumberOfAppartment}`,
+      );
     }
-    
+  }
 }
 
+const personMale = new Person('John', 'Male');
+const personFemale = new Person('Kate', 'Female');
+const person3 = new Person('Kate', 'Female');
 
-//  Створити клас Будинок.
+const residentJohn = new Appartment();
+const residentKate = new Appartment();
+const resident3 = new Appartment();
 
-// Властивості:
-// масив квартир, який при створенні пустий;
-// максимальна кількість квартир.
+residentJohn.addResidents(personMale);
+residentKate.addResidents(personFemale);
+resident3.addResidents(person3);
 
-// Методи:
-// конструктор, який приймає один параметр: максимальну кількість квартир;
-// додати квартиру - метод повинен приймати екземпляр класу Квартира, перевіряти,
-// чи не буде кількість перевищувати максимальну кількість квартир, і якщо це так, додати квартиру, в іншому випадку виводить у консоль відповідне повідомлення.
+const building = new House(2);
+
+building.addAppartment(residentJohn);
+building.addAppartment(residentKate);
+building.addAppartment(resident3);
+
+console.log(building);
