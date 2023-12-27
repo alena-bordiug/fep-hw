@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="main-form" id="main-form">
+        <label for="firstName" class="input-label">First name</label>
+        <input
+          type="text"
+          id="firstName"
+          class="input"
+          placeholder="Your name here"
+        />
+        <label for="secondName" class="input-label">Second name</label>
+        <input
+          type="text"
+          id="secondName"
+          class="input"
+          placeholder="Your surname here"
+        />
+        <div class="gender-radio-wrapper">
+          <span class="input-label">Choose your gender</span>
+          <input
+            type="radio"
+            id="male"
+            name="gender"
+            value="male"
+            class="radio-btn"
+            checked
+          />
+          <label for="male" class="radio-label">Male</label>
+          <input
+            type="radio"
+            id="female"
+            name="gender"
+            value="female"
+            class="radio-btn"
+          />
+          <label for="female" class="radio-label">Female</label>
+        </div>
+        <div class="city-selection">
+          <span class="input-label">Select you city</span>
+          <select name="city-selection" id="city" class="input">
+            <option value="selection">Choose city</option>
+            <option value="kyiv">Kyiv</option>
+            <option value="odessa">Odessa</option>
+            <option value="dnepr">Dnepr</option>
+          </select>
+        </div>
+        <label for="address" class="input-label">You adress here</label>
+        <textarea name="address" id="address" class="textarea"></textarea>
+        <div class="checkbox-wrapper">
+          <span class="input-label">Select languages that you speak</span>
+          <div class="checkbox">
+            <input type="checkbox" id="english" name="en" />
+            <label for="english">English</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="ukrainian" name="ua" />
+            <label for="ukrainian">Ukrainian</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" id="polish" name="pl" />
+            <label for="polish">Polish</label>
+          </div>
+        </div>
+        <input
+          id="submit-btn"
+          type="button"
+          value="Submit"
+          class="submit-btn"
+        />
+      </form>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>

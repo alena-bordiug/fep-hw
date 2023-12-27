@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.main-form {
+    padding-top: 24px;;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.submit-btn {
+    /* margin-top: 12px; */
+    padding: 4px;
+}
+
+.input {
+    padding: 4px;
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.input-label {
+    margin-bottom: 8px;
+    display: block;
+}
+
+
+.gender-radio-wrapper {
+    margin-bottom: 18px;
+}
+
+.radio-btn {
+    margin-right: 4px;
+}
+
+.radio-label {
+    margin-right: 24px;
+}
+
+.textarea {
+    resize: none;
+    width: 100%;
+    min-height: 60px;
+    margin-bottom: 18px;
+    padding: 4px;
+}
+
+.checkbox-wrapper {
+    margin-bottom: 12px;
+}
+
+.checkbox-wrapper input {
+    margin-right: 8px;
+}
+
+.checkbox {
+    margin-bottom: 4px;
+}
