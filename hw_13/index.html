@@ -9,7 +9,9 @@
   <body>
     <div class="container">
       <form name="mainForm" class="main-form" id="main-form">
-        <label for="firstName" class="input-label" name="name">First name:</label>
+        <label for="firstName" class="input-label" name="name"
+          >First name:</label
+        >
         <input
           type="text"
           id="firstName"
@@ -29,7 +31,7 @@
             type="radio"
             id="male"
             name="gender"
-            value="male"
+            value="Male"
             class="radio-btn"
             checked
           />
@@ -38,7 +40,7 @@
             type="radio"
             id="female"
             name="gender"
-            value="female"
+            value="Female"
             class="radio-btn"
           />
           <label for="female" class="radio-label">Female</label>
@@ -57,15 +59,15 @@
         <div class="checkbox-wrapper">
           <span class="input-label">Select languages that you speak:</span>
           <div class="checkbox">
-            <input type="checkbox" id="english" name="en" />
+            <input type="checkbox" id="english" value="English" />
             <label for="english">English</label>
           </div>
           <div class="checkbox">
-            <input type="checkbox" id="ukrainian" name="ua" />
+            <input type="checkbox" id="ukrainian" value="Ukrainian" />
             <label for="ukrainian">Ukrainian</label>
           </div>
           <div class="checkbox">
-            <input type="checkbox" id="polish" name="pl" />
+            <input type="checkbox" id="polish" value="Polish" />
             <label for="polish">Polish</label>
           </div>
         </div>
@@ -78,7 +80,7 @@
       </form>
       <div id="user-data" class="d-none">
         <div id="data-table" class="data-table"></div>
-        <input id="close-btn" type="button" value="Close" class="close-btn">
+        <input id="close-btn" type="button" value="Close" class="close-btn" />
       </div>
     </div>
     <script src="form.js"></script>

@@ -10,14 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const gender = document.querySelector('input[name="gender"]:checked').value;
     const city = document.getElementById('city').value;
     const address = document.getElementById('address').value;
-
-    const languages = [];
-    document
-      .querySelectorAll('input[type="checkbox"]:checked')
-      .forEach(function (checkbox) {
-        languages.push(checkbox.name);
-      });
-
+    const languages = getCheckboxValue();
     const tableContent = `
       <table>
         <tr>
@@ -47,8 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
       </table>
     `;
 
-      dataTable.innerHTML = tableContent;
-      dataTable.classList.add('table')
+    dataTable.innerHTML = tableContent;
+    dataTable.classList.add('table');
     form.classList.add('d-none');
     userData.classList.remove('d-none');
   });
@@ -60,3 +53,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+function getCheckboxValue() {
+  const languagesCheckbox = document.querySelectorAll(
+    'input[type="checkbox"]:checked',
+  );
+  const checkboxValue = [];
+
+  if (languagesCheckbox.length === 0) {
+    checkboxValue.push('No languages checked');
+  } else {
+    languagesCheckbox.forEach((checkbox) => {
+      checkboxValue.push(checkbox.value);
+    });
+  }
+  console.log(checkboxValue);
+  return checkboxValue;
+}
