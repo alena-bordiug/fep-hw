@@ -8,23 +8,23 @@
   </head>
   <body>
     <div class="container">
-      <form class="main-form" id="main-form">
-        <label for="firstName" class="input-label">First name</label>
+      <form name="mainForm" class="main-form" id="main-form">
+        <label for="firstName" class="input-label" name="name">First name:</label>
         <input
           type="text"
           id="firstName"
           class="input"
           placeholder="Your name here"
         />
-        <label for="secondName" class="input-label">Second name</label>
+        <label for="secondName" class="input-label">Second name:</label>
         <input
           type="text"
           id="secondName"
           class="input"
           placeholder="Your surname here"
         />
-        <div class="gender-radio-wrapper">
-          <span class="input-label">Choose your gender</span>
+        <div class="gender-radio-wrapper" id="radio-btn">
+          <span class="input-label">Choose your gender:</span>
           <input
             type="radio"
             id="male"
@@ -43,8 +43,8 @@
           />
           <label for="female" class="radio-label">Female</label>
         </div>
-        <div class="city-selection">
-          <span class="input-label">Select you city</span>
+        <div class="city-selection" id="city-selection">
+          <span class="input-label">Select you city:</span>
           <select name="city-selection" id="city" class="input">
             <option value="selection">Choose city</option>
             <option value="kyiv">Kyiv</option>
@@ -52,10 +52,10 @@
             <option value="dnepr">Dnepr</option>
           </select>
         </div>
-        <label for="address" class="input-label">You adress here</label>
+        <label for="address" class="input-label">You adress here:</label>
         <textarea name="address" id="address" class="textarea"></textarea>
         <div class="checkbox-wrapper">
-          <span class="input-label">Select languages that you speak</span>
+          <span class="input-label">Select languages that you speak:</span>
           <div class="checkbox">
             <input type="checkbox" id="english" name="en" />
             <label for="english">English</label>
@@ -76,6 +76,10 @@
           class="submit-btn"
         />
       </form>
+      <div id="user-data" class="d-none">
+        <div id="data-table" class="data-table"></div>
+        <input id="close-btn" type="button" value="Close" class="close-btn">
+      </div>
     </div>
     <script src="form.js"></script>
   </body>

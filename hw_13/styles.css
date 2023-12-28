@@ -66,3 +66,22 @@
 .checkbox {
     margin-bottom: 4px;
 }
+
+.d-none {
+    display: none;
+}
+
+.data-table {
+    padding-top: 24px;
+}
+
+.table{
+    margin-bottom: 18px;
+}
+
+.close-btn {
+    display: block;
+    max-width: 82px;
+    width: 100%;
+    padding: 4px;
+}
