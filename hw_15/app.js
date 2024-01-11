@@ -15,15 +15,15 @@ weatherBtn.addEventListener('click', () => {
 function renderWeather(data) {
   if (data.weather && data.weather.length > 0) {
     const iconUrl = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-    const html = `<article class="weather">
-  <div class="weather-info">
+    const html = `<article>
+  <div>
     <h1>${data.name}<img src="${iconUrl}" alt="weather-icon"></h1>
-    <p>temp:${data.main.temp}</p>
-    <p>pressure:${data.main.pressure}</p>
-    <p>description:${data.weather[0].description}</p>
-    <p>humidity:${data.main.humidity}</p>
-    <p>speed:${data.wind.speed}</p>
-    <p>deg:${data.wind.deg}</p>
+    <p>Temperature: ${data.main.temp}&deg;C</p>
+    <p>Pressure: ${data.main.pressure} hPa</p>
+    <p>Description: ${data.weather[0].description}</p>
+    <p>Humidity: ${data.main.humidity}%</p>
+    <p>Speed: ${data.wind.speed}km/h</p>
+    <p>Degree: ${data.wind.deg}°</p>
   </div>
   </article>`;
 
